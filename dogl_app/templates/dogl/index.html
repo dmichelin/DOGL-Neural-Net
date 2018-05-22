@@ -11,16 +11,24 @@
     <title>Kalamazoo College DOGL Predictor</title>
   </head>
   <body>
-    <h1>K College DOGL Predictor</h1>
-    <h2>Poorly coded by Daniel Michelin and Emily Fletcher</h2>
-    <h3>An end to the DOGL debate</h3>
-    <h2>Predictions:</h2>
-    <ul>  
-      {% for prediction in predictions%}
-      <li>{{prediction}} </li>
-      {% endfor %}
-    </ul>
+    <div class="container text-center">
+      <h1>K College DOGL Predictor</h1>
+      <h3>An end to the DOGL debate</h3>
+      <h2>Predictions:</h2>
+      <div class="card">
+      <ul class ="list-group list-group-flush">  
+        {% for prediction in predictions%}
+        <li class="list-group-item">{{prediction}} </li>
+        {% endfor %}
+      </ul>
+      </div>
+    </div>
+    <footer class="footer text-muted text-center">
+    Coded by Daniel Michelin and Emily Fletcher 
+    <a href=https://github.com/dmichelin/DOGL-Neural-Net> Github </a>
+  </footer>
     <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
