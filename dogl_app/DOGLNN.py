@@ -19,8 +19,8 @@ class DoglNet:
     def initModel(self):
         if not self.trained:
             print("Training Model")
-            X = np.loadtxt(dir_path+"\DOGL_DATASET.csv",skiprows=1,delimiter=",",usecols=(1,2,3,4))
-            Y = np.loadtxt(dir_path+"\DOGL_DATASET.csv",skiprows=1,delimiter=",",usecols=(5))
+            X = np.loadtxt(dir_path+"/DOGL_DATASET.csv",skiprows=1,delimiter=",",usecols=(1,2,3,4))
+            Y = np.loadtxt(dir_path+"/DOGL_DATASET.csv",skiprows=1,delimiter=",",usecols=(5))
             X_train = X[:230,:]
             Y_train = Y[:230]
             X_test = X[230:,:]
