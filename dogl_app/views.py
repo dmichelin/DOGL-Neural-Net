@@ -4,6 +4,7 @@ from .DOGLNN import DoglNet
 from .services import get_weather_predictions
 from datetime import datetime
 def index(request):
+    print("Just about to train model")
     d = DoglNet()
     d.initModel()
     weather = get_weather_predictions()
