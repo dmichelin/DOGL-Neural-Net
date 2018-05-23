@@ -11,8 +11,7 @@ def get_weather_predictions():
         r = r.json()
         full_predictions = r['list']
         # Map to predicted rain in mm, predicted temp_max in fahrenheit, and date
-        useful_predictions = list(map(lambda entry: [entry['rain']['3h'] if 'rain' in entry and '3h' in entry['rain
-        '] else 0, convert_kelvin_to_fahrenheit(entry['main']['temp_max']), convert_epoch_day_to_excel_day(entry['dt']),get_day(entry['dt'])],full_predictions))
+        useful_predictions = list(map(lambda entry: [entry['rain']['3h'] if 'rain' in entry and '3h' in entry['rain'] else 0, convert_kelvin_to_fahrenheit(entry['main']['temp_max']), convert_epoch_day_to_excel_day(entry['dt']),get_day(entry['dt'])],full_predictions))
         #Every fifth prediction is the middle of the day
         weather_predictions = useful_predictions[4::8]
     print(weather_predictions)
